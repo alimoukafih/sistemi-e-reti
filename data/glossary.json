@@ -1,0 +1,122 @@
+[
+{
+"term": "Cache",
+"def": "Memoria delle risposte già ottenute."
+},
+{
+"term": "Certificato",
+"def": "Documento digitale che dimostra l’identità del server."
+},
+{
+"term": "Cifratura",
+"def": "Rende i dati illeggibili a chi non ha la chiave."
+},
+{
+"term": "Client",
+"def": "Chi fa la richiesta. Es.: il browser."
+},
+{
+"term": "Codice di stato",
+"def": "Numero nella risposta. Es.: 404."
+},
+{
+"term": "DHCP",
+"def": "Curiosità: assegna automaticamente l’indirizzo IP a un dispositivo."
+},
+{
+"term": "DNS",
+"def": "Traduce nomi in indirizzi IP, porta 53."
+},
+{
+"term": "Frammento",
+"def": "Parte dopo #, usata dal browser. Es.: #intro."
+},
+{
+"term": "Host",
+"def": "Nome del server nell’URL. Es.: www.esempio.it."
+},
+{
+"term": "HTTP",
+"def": "Protocollo del web, porta 80. Es.: GET /index.html."
+},
+{
+"term": "HTTPS",
+"def": "HTTP protetto da TLS, porta 443."
+},
+{
+"term": "Intestazione",
+"def": "Coppia nome: valore. Es.: Host: www.esempio.it."
+},
+{
+"term": "IP",
+"def": "Livello di rete: indirizzi dei dispositivi. Es.: 93.184.216.34."
+},
+{
+"term": "Livello applicativo",
+"def": "Il livello dei protocolli usati dalle app. Es.: HTTP."
+},
+{
+"term": "Metodo",
+"def": "Azione richiesta. Es.: GET, POST."
+},
+{
+"term": "Porta",
+"def": "Numero che identifica il servizio. Es.: 443 per HTTPS."
+},
+{
+"term": "Query",
+"def": "Parametri dopo il ?. Es.: ?lingua=it."
+},
+{
+"term": "Resolver",
+"def": "Server che cerca l’IP per conto del client."
+},
+{
+"term": "Risoluzione iterativa",
+"def": "Ogni server indica a chi chiedere dopo."
+},
+{
+"term": "Risoluzione ricorsiva",
+"def": "Il resolver fa tutta la ricerca e dà la risposta finale."
+},
+{
+"term": "Schema",
+"def": "Parte iniziale dell’URL. Es.: https."
+},
+{
+"term": "Server",
+"def": "Chi risponde. Es.: il computer che ospita il sito."
+},
+{
+"term": "Server autorevole",
+"def": "Conosce l’IP finale di un dominio."
+},
+{
+"term": "Server radice",
+"def": "Primo livello della gerarchia DNS."
+},
+{
+"term": "Server TLD",
+"def": "Gestisce un dominio di primo livello. Es.: .it."
+},
+{
+"term": "SMTP",
+"def": "Protocollo per inviare la posta, porte 25 e 587."
+},
+{
+"term": "TCP",
+"def": "Protocollo di trasporto affidabile. Es.: apre la connessione per HTTP."
+},
+{
+"term": "TLS",
+"def": "Protocollo che cifra, autentica il server e controlla l’integrità."
+},
+{
+"term": "UDP",
+"def": "Trasporto veloce senza connessione. Es.: molte domande DNS."
+},
+{
+"term": "URL",
+"def": "Indirizzo di una risorsa. Es.: https://www.esempio.it/."
+}
+]

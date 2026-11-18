@@ -1,0 +1,210 @@
+[
+{
+"topic": "HTTP",
+"q": "Quale metodo si usa per leggere una pagina?",
+"options": [
+"GET",
+"DELETE",
+"PUT",
+"HEAD"
+],
+"answer": 0,
+"explain": "GET richiede una risorsa.",
+"source": "RFC 9110"
+},
+{
+"topic": "HTTP",
+"q": "Che cosa significa 404?",
+"options": [
+"Errore del server",
+"Risorsa non trovata",
+"Successo",
+"Reindirizzamento"
+],
+"answer": 1,
+"explain": "4xx sono errori del client; 404 è Not Found.",
+"source": "RFC 9110"
+},
+{
+"topic": "HTTP",
+"q": "Una risposta HTTP è composta da…",
+"options": [
+"Solo il corpo",
+"Riga di stato, intestazioni e corpo",
+"Solo intestazioni",
+"Un indirizzo IP"
+],
+"answer": 1,
+"explain": "Ha riga di stato, intestazioni e (spesso) corpo.",
+"source": "MDN HTTP"
+},
+{
+"topic": "HTTP",
+"q": "Quale classe indica successo?",
+"options": [
+"1xx",
+"2xx",
+"4xx",
+"5xx"
+],
+"answer": 1,
+"explain": "2xx = successo.",
+"source": "RFC 9110"
+},
+{
+"topic": "DNS",
+"q": "A che cosa serve il DNS?",
+"options": [
+"Cifrare i messaggi",
+"Tradurre nomi in IP",
+"Inviare la posta",
+"Scaricare le pagine"
+],
+"answer": 1,
+"explain": "Associa un nome a un indirizzo IP.",
+"source": "RFC 1034"
+},
+{
+"topic": "DNS",
+"q": "Chi conosce l’IP finale di un dominio?",
+"options": [
+"Server radice",
+"Server TLD",
+"Server autorevole",
+"Il browser"
+],
+"answer": 2,
+"explain": "Il server autorevole ha il dato definitivo.",
+"source": "RFC 1034"
+},
+{
+"topic": "DNS",
+"q": "A che cosa serve la cache DNS?",
+"options": [
+"A cifrare",
+"A evitare ricerche ripetute",
+"A cambiare il dominio",
+"A inviare email"
+],
+"answer": 1,
+"explain": "Salva risposte già ottenute.",
+"source": "RFC 1035"
+},
+{
+"topic": "DNS",
+"q": "Nella risoluzione ricorsiva chi fa le domande ai vari server?",
+"options": [
+"L’utente",
+"Il resolver",
+"Il server web",
+"Il certificato"
+],
+"answer": 1,
+"explain": "Il resolver lavora per conto del client.",
+"source": "RFC 1034"
+},
+{
+"topic": "HTTPS",
+"q": "Quale porta usa HTTPS?",
+"options": [
+"80",
+"25",
+"443",
+"53"
+],
+"answer": 2,
+"explain": "443 su TCP.",
+"source": "RFC 8446"
+},
+{
+"topic": "HTTPS",
+"q": "Che cosa dimostra il certificato?",
+"options": [
+"La velocità",
+"L’identità del server",
+"Il numero di visite",
+"La password"
+],
+"answer": 1,
+"explain": "Autentica il server.",
+"source": "RFC 8446"
+},
+{
+"topic": "HTTPS",
+"q": "Che cosa NON fa TLS?",
+"options": [
+"Cifrare",
+"Controllare l’integrità",
+"Autenticare il server",
+"Tradurre nomi in IP"
+],
+"answer": 3,
+"explain": "Il DNS traduce i nomi, non TLS.",
+"source": "RFC 8446"
+},
+{
+"topic": "HTTPS",
+"q": "Con HTTP un intruso sulla rete può…",
+"options": [
+"Leggere il contenuto",
+"Niente",
+"Solo vedere il certificato",
+"Spegnere il server"
+],
+"answer": 0,
+"explain": "HTTP viaggia in chiaro.",
+"source": "MDN HTTP"
+},
+{
+"topic": "SMTP",
+"q": "Quale comando indica il destinatario?",
+"options": [
+"MAIL FROM",
+"RCPT TO",
+"DATA",
+"QUIT"
+],
+"answer": 1,
+"explain": "RCPT TO indica il destinatario.",
+"source": "RFC 5321"
+},
+{
+"topic": "SMTP",
+"q": "Che cosa significa 354?",
+"options": [
+"Chiusura",
+"Casella inesistente",
+"Inizia a scrivere il testo",
+"Ok"
+],
+"answer": 2,
+"explain": "Dopo DATA il server risponde 354.",
+"source": "RFC 5321"
+},
+{
+"topic": "SMTP",
+"q": "Quale codice indica una casella inesistente?",
+"options": [
+"250",
+"221",
+"550",
+"354"
+],
+"answer": 2,
+"explain": "550: utente non trovato.",
+"source": "RFC 5321"
+},
+{
+"topic": "SMTP",
+"q": "SMTP serve per…",
+"options": [
+"Ricevere pagine web",
+"Inviare posta",
+"Risolvere nomi",
+"Cifrare"
+],
+"answer": 1,
+"explain": "Invia messaggi di posta.",
+"source": "RFC 5321"
+}
+]

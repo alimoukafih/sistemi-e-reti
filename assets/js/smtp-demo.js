@@ -1,0 +1,7 @@
+(()=>{const X={"EHLO":"Il client si presenta al server.","MAIL FROM":"Indica chi manda il messaggio.","RCPT TO":"Indica il destinatario. Se non esiste: 550.","DATA":"Il client sta per inviare il testo del messaggio.","QUIT":"Il client chiude la sessione.","250":"Tutto ok.","354":"Il server è pronto: scrivi il testo e chiudi con una riga con solo un punto.","221":"Il server chiude la connessione.","550":"Casella inesistente: la sessione si ferma."};
+$("#g4").onclick=()=>{const f=$("#fr").value,t=$("#to").value,bad=t.startsWith("nessuno");
+let L=[["EHLO scuola.it","EHLO"],["250 Pronto","250"],["MAIL FROM:<"+f+">","MAIL FROM"],["250 OK","250"],["RCPT TO:<"+t+">","RCPT TO"]];
+if(bad)L.push(["550 Utente sconosciuto","550"],["QUIT","QUIT"],["221 Arrivederci","221"]);
+else L.push(["250 OK","250"],["DATA","DATA"],["354 Scrivi il testo","354"],["Subject: "+$("#su").value+" / "+$("#tx").value+" / .","DATA"],["250 Messaggio accettato","250"],["QUIT","QUIT"],["221 Arrivederci","221"]);
+$("#sm").innerHTML=L.map(l=>{const c=/^(250|354|221|550)/.test(l[0]);return `<div class="cols"><div>${c?"":`<button class="opt" data-k="${l[1]}">${esc(l[0])}</button>`}</div><div>${c?`<button class="opt" data-k="${l[1]}">${esc(l[0])}</button>`:""}</div></div>`}).join("");
+document.querySelectorAll("#sm .opt").forEach(b=>b.onclick=()=>$("#ex").textContent=X[b.dataset.k])}})();

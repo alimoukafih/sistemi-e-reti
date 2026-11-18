@@ -1,0 +1,6 @@
+(()=>{const ip={"www.esempio.it":"93.184.216.34","www.scuola.edu.it":"151.101.1.69"};let i=0,S=[];
+function build(){const d=$("#dom").value,tld=d.split(".").slice(-1)[0],a=ip[d];i=0;
+S=$("#cache").checked?[["Browser","Cerca "+d+" nella cache locale: trovato "+a+"."],["Browser → Server web","Salta la ricerca DNS e apre la connessione TCP verso "+a+"."],["Server web → Browser","HTTP: risposta 200 OK con la pagina."]]:
+[["Browser","Cerca "+d+" nella cache locale: non c’è."],["Browser → Resolver","Domanda: qual è l’IP di "+d+"?"],["Resolver → Server radice","Domanda: chi gestisce ."+tld+"? Risposta: ecco il server TLD."],["Resolver → Server TLD","Domanda: chi gestisce "+d+"? Risposta: ecco il server autorevole."],["Resolver → Server autorevole","Domanda: IP di "+d+"? Risposta: "+a+"."],["Resolver → Browser","Il resolver restituisce "+a+" e lo mette in cache."],["Browser → Server web","Apre TCP verso "+a+" e invia la richiesta HTTP: risposta 200 OK."]];draw()}
+function draw(){$("#s1").innerHTML=S.map((s,k)=>`<li class="${k<i?"done":k==i?"now":""}"><b>${s[0]}</b>: ${esc(s[1])}</li>`).join("");$("#b1").disabled=i==0;$("#n1").disabled=i>=S.length-1}
+$("#n1").onclick=()=>{i++;draw()};$("#b1").onclick=()=>{i--;draw()};$("#r1").onclick=build;$("#dom").onchange=build;$("#cache").onchange=build;build()})();

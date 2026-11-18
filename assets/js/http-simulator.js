@@ -1,0 +1,8 @@
+(()=>{const R={"/index.html":{GET:[200,"OK","<h1>Ciao dal server finto</h1>"],HEAD:[200,"OK",""]},"/modulo":{POST:[201,"Created","Modulo ricevuto"],GET:[200,"OK","<form>…</form>"]},"/privato":{GET:[401,"Unauthorized","Serve l’autenticazione"]},"/vecchia-pagina":{GET:[301,"Moved Permanently","Nuova posizione: /index.html"]}};
+const ok={"/index.html":"GET","/modulo":"POST","/non-esiste":"DELETE"};let mis=null;
+function srv(m,p){const r=R[p];if(!r)return [404,"Not Found","Risorsa non trovata"];if(!r[m])return [405,"Method Not Allowed","Metodo non consentito qui"];return r[m]}
+document.querySelectorAll(".ms").forEach(b=>b.onclick=()=>{$("#m").value=b.dataset.m;$("#p").value=b.dataset.p;mis=b.dataset.m+b.dataset.p;$("#mis").textContent="Missione scelta: "+b.textContent+".";$("#fb").textContent=""});
+$("#go2").onclick=()=>{const m=$("#m").value,p=$("#p").value,b=["POST","PUT"].includes(m)?$("#bd").value:"";
+$("#rq").textContent=m+" "+p+" HTTP/1.1\n"+$("#h").value+(b?"\nContent-Length: "+b.length+"\n\n"+b:"");
+const [c,t,body]=srv(m,p);$("#rs").textContent="HTTP/1.1 "+c+" "+t+"\nContent-Type: text/html\n\n"+(m=="HEAD"?"(HEAD: nessun corpo)":body);
+let f="Stato "+c+" ("+Math.floor(c/100)+"xx).";if(mis){const [mm,pp]=[mis.match(/^[A-Z]+/)[0],mis.replace(/^[A-Z]+/,"")];f+=(m==mm&&p==pp?" Richiesta adatta alla missione.":" Questa richiesta non corrisponde alla missione scelta.");if(mm=="DELETE"&&m==mm&&p==pp)f+=" La risorsa non esiste, quindi il server risponde 404."}$("#fb").textContent=f}})();

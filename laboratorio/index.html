@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Laboratorio · WebTrip</title><link rel="stylesheet" href="../assets/css/styles.css"></head><body>
+<header><a class="logo" href="../index.html">WebTrip</a><button id="mb" aria-expanded="false" aria-controls="nav">Menu</button><nav id="nav"><a href="../teoria/index.html">Teoria</a><a href="../laboratorio/index.html">Laboratorio</a><a href="../studio/index.html">Studio</a><a href="../crediti.html">Crediti e fonti</a></nav></header>
+<main><p class="crumb">Sei in: Laboratorio</p><h1>Laboratorio</h1><p>Sono simulazioni: funzionano nel browser, non inviano nulla a server veri.</p>
+<section id="a1" class="card"><h2>A1 · Il viaggio di una richiesta (DNS + HTTP)</h2>
+<label for="dom">Dominio</label><select id="dom"><option>www.esempio.it</option><option>www.scuola.edu.it</option></select>
+<label><input type="checkbox" id="cache"> Cache attiva (il dominio è già stato visitato)</label>
+<ol id="s1" class="steps" aria-live="polite"></ol><div class="row"><button class="alt" id="b1">Indietro</button><button id="n1">Avanti</button><button class="alt" id="r1">Ricomincia</button></div>
+<p><a href="../studio/index.html#quiz">Passa al quiz</a></p></section>
+<section id="a2" class="card"><h2>A2 · Simulatore di scambio HTTP</h2>
+<p class="box warn">Prova didattica: non invia richieste vere e non chiede password o dati personali.</p>
+<div class="row"><div><label for="m">Metodo</label><select id="m"><option>GET</option><option>POST</option><option>PUT</option><option>DELETE</option><option>HEAD</option></select></div>
+<div><label for="p">Percorso</label><select id="p"><option>/index.html</option><option>/modulo</option><option>/privato</option><option>/vecchia-pagina</option><option>/non-esiste</option></select></div></div>
+<label for="h">Intestazioni</label><textarea id="h" rows="3">Host: www.esempio.it</textarea>
+<label for="bd">Corpo (per POST e PUT)</label><textarea id="bd" rows="2">nome=Giulia</textarea>
+<div class="row"><button id="go2">Invia richiesta</button></div>
+<h3>Missioni</h3><p><button class="alt ms" data-m="GET" data-p="/index.html">Ottieni la pagina</button> <button class="alt ms" data-m="POST" data-p="/modulo">Invia un modulo</button> <button class="alt ms" data-m="DELETE" data-p="/non-esiste">Cancella una risorsa che non esiste</button></p>
+<p>Scegli una missione, poi premi “Invia richiesta”. <span id="mis"></span></p>
+<h3>Richiesta</h3><pre id="rq"></pre><h3>Risposta</h3><pre id="rs"></pre><p id="fb" aria-live="polite"></p></section>
+<section id="a3" class="card"><h2>A3 · HTTP contro HTTPS con un intruso</h2>
+<p class="box warn">La cifratura è solo rappresentata: non c’è una vera connessione TLS e nessuna password viene inviata o salvata. Usa una password di prova.</p>
+<label for="pw">Password di prova</label><input id="pw" value="prova123">
+<div class="row"><button id="h3">Invia con HTTP</button><button id="s3">Invia con HTTPS</button></div>
+<div class="cols"><div><b>Cosa vede l’intruso</b><pre id="int">Nessun messaggio.</pre></div><div><b>Cosa riceve il server</b><pre id="srv">Nessun messaggio.</pre></div></div>
+<ol id="tls" class="steps"></ol></section>
+<section id="a4" class="card"><h2>A4 · Sessione SMTP animata</h2>
+<div class="cols"><div><label for="fr">Mittente</label><input id="fr" value="anna@esempio.it"></div><div><label for="to">Destinatario</label><select id="to"><option>marco@scuola.it</option><option>nessuno@scuola.it</option></select></div></div>
+<label for="su">Oggetto</label><input id="su" value="Ciao"><label for="tx">Testo</label><textarea id="tx" rows="2">Ci vediamo domani.</textarea>
+<div class="row"><button id="g4">Invia</button></div><p class="box warn">Simulazione: nessuna email viene spedita.</p>
+<div class="cols"><b>Client</b><b>Server</b></div><div id="sm"></div><p id="ex" aria-live="polite">Clicca su una riga per la spiegazione.</p></section></main>
+<footer>WebTrip · Sistemi e Reti · Ali Moukafih, Raul Ungurean, Marco Degiovanni</footer><script src="../assets/js/main.js"></script><script src="../assets/js/dns-simulator.js"></script><script src="../assets/js/http-simulator.js"></script><script src="../assets/js/tls-demo.js"></script><script src="../assets/js/smtp-demo.js"></script></body></html>

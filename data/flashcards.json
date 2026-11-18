@@ -1,0 +1,82 @@
+[
+{
+"front": "Client",
+"back": "Chi fa la richiesta. Es.: il browser."
+},
+{
+"front": "Server",
+"back": "Chi risponde. Es.: il computer che ospita il sito."
+},
+{
+"front": "TCP",
+"back": "Protocollo di trasporto affidabile. Es.: apre la connessione per HTTP."
+},
+{
+"front": "UDP",
+"back": "Trasporto veloce senza connessione. Es.: molte domande DNS."
+},
+{
+"front": "IP",
+"back": "Livello di rete: indirizzi dei dispositivi. Es.: 93.184.216.34."
+},
+{
+"front": "Livello applicativo",
+"back": "Il livello dei protocolli usati dalle app. Es.: HTTP."
+},
+{
+"front": "URL",
+"back": "Indirizzo di una risorsa. Es.: https://www.esempio.it/."
+},
+{
+"front": "Schema",
+"back": "Parte iniziale dell’URL. Es.: https."
+},
+{
+"front": "Host",
+"back": "Nome del server nell’URL. Es.: www.esempio.it."
+},
+{
+"front": "Porta",
+"back": "Numero che identifica il servizio. Es.: 443 per HTTPS."
+},
+{
+"front": "Query",
+"back": "Parametri dopo il ?. Es.: ?lingua=it."
+},
+{
+"front": "Frammento",
+"back": "Parte dopo #, usata dal browser. Es.: #intro."
+},
+{
+"front": "HTTP",
+"back": "Protocollo del web, porta 80. Es.: GET /index.html."
+},
+{
+"front": "Metodo",
+"back": "Azione richiesta. Es.: GET, POST."
+},
+{
+"front": "Codice di stato",
+"back": "Numero nella risposta. Es.: 404."
+},
+{
+"front": "Intestazione",
+"back": "Coppia nome: valore. Es.: Host: www.esempio.it."
+},
+{
+"front": "DNS",
+"back": "Traduce nomi in indirizzi IP, porta 53."
+},
+{
+"front": "Resolver",
+"back": "Server che cerca l’IP per conto del client."
+},
+{
+"front": "Server radice",
+"back": "Primo livello della gerarchia DNS."
+},
+{
+"front": "Server TLD",
+"back": "Gestisce un dominio di primo livello. Es.: .it."
+}
+]
